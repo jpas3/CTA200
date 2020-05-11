@@ -1,0 +1,55 @@
+%% \listfiles
+\documentclass[apj]{emulateapj}
+%\documentclass[preprint2,12pt]{emulateapj}
+%% \usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{amssymb,amsmath}
+\usepackage{array}
+
+
+
+\singlespace
+
+
+
+
+%% Editing markup...
+\usepackage{color}
+
+\begin{document}
+
+\title{Assignment 2: Question 1}
+ %% ---------
+ 
+\author{Julia Pasiecznik}
+
+\section{Methods}
+\label{sec:Methods}
+To iterate the equation $z_{i + 1} = z_i^2 + c$ over the complex plane $c = x + iy$, I defined a function, complexiter, 
+that takes in the maximum iterations allowed, and two numeric sequences, one for x values and one for y values. It runs
+a for loop within the maximum iterations to iterate the function for z at every point in the complex plane defined by the
+numeric sequences. It returns an array of of Boolean values, True if iterations at the point remain bounded, meaning the 
+value of z never exceeds the absolute value of 2, and False if the iterations at the point run off to infinity.
+
+\section{Analysis}
+\label{sec:Analysis}
+I pass the function for two sets of numeric sequences. One is $-2 < x < 2$ and $-2 < y < 2$ as given in the question and shown in Figure 1. Figure 2 is zoomed in on the section $-1 < x < 0$ and $-1 < y < 0$ where the iterations were rerun.
+
+\begin{figure}
+\includegraphics[width=1.05\columnwidth]{q1_Figure_1.pdf}
+\caption{Figure 1: The Mandelbrot set plotted for $-2 < x < 2$ and $-2 < y < 2$.}
+\label{fig:Mandelbrot Set}
+\end{figure}
+
+The image in Figure 1 is gray scaled so that iterations of points that go off to inifity are coloured black and the ones that remain bounded are white.
+
+\begin{figure}
+\includegraphics[width=1.05\columnwidth]{q1_Figure_2.pdf}
+\caption{Figure 2: The Zoomed in Mandelbrot set plotted for $-1 < x < 0$ and $-1 < y < 0$.}
+\label{fig: Zoomed in Mandelbrot Set}
+\end{figure}
+
+Figure 2 zoomed in on Figure 1 for the range $-1 < x < 0$ and $-1 < y < 0$ and reran the iterations, giving the same output, the madelbrot set. This output is reasonable because it is a fractal image just recreated for a smaller range on the complex scale.
+
+\end{document}

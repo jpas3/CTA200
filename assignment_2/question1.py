@@ -14,8 +14,6 @@ def complexiter(max_iter, x, y):
     Returns:
     True if iterations at that point remain bounded, False otherwise
     """
-    x = np.linspace(-2, 2, 500)
-    y = np.linspace(-2, 2, 500)
     
     c = x[:,np.newaxis] + y[np.newaxis,:]*1j
     #start from 0
