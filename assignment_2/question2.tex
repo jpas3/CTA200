@@ -1,0 +1,51 @@
+%% \listfiles
+\documentclass[apj]{emulateapj}
+%\documentclass[preprint2,12pt]{emulateapj}
+%% \usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{amssymb,amsmath}
+\usepackage{array}
+
+\singlespace
+
+%% Editing markup...
+\usepackage{color}
+
+\begin{document}
+
+\title{Assignment 2: Question 2}
+ %% ---------
+ 
+\author{Julia Pasiecznik}
+\keywords{SIR Model of the spread of an infectious disease}
+
+\section{Methods}
+\label{sec:Methods}
+To solve a system of 3 ordinary differential equations, given in the SIR model, I defined a function that determines the value of the three differential equations at one instant in time depending on initial conditions and chosen parameters. dSdt determines the rate of change of those that are not infected but are susceptible to being infected. dIdt determines the rate of change of the total infected individuals. dRdt determines the rate of change of the individuals who have recovered. I defined another function that plots the SIR model of disease for given gamma and beta parameters.
+
+\section{Analysis}
+\label{sec:Analysis}
+I pass the plotting function, for 4 sets of parameters. Gamma is the reciprocal of the average period of infectiousness. Beta gives a proportionality of how many people get into contact with the infected person. Figure 1 shows the first set, Gamma = 1/10 and Beta = 0.2. This Gamma reflects COVID infectious periods, where most people are infectious for 10 days and based on the proportionality of 0.2, 200 people will come into contact. Figure 2 shows the same infectious disease model for Gamma = 1/10 and Beta = 0.1. The COVID patient is refraining from social activies and thus reduces the amount of people they come into contact with by half to 100. Clearly there is a big difference between the two graphs; more people are unaffected if social distancing is practiced. Figure 3 shows a depiction of the spread of the common cold that usually lasts about 7 days, therefore Gamma = 1/7 and Beta is chosen to be 0.2 based on the average amount of peolpe a given person comes into contact with. Figure 4 shows a depiction of the spread of a flu like virus that usually lasts about 14 days so that Gamma = 1/14 and Beta is kept the same at 0.2. Clearly more individuals get infected due to an increase in the infectious period and the fact that the infected person is still coming into contact with the same amount of people a day.
+
+\begin{figure}
+\includegraphics[width=1.05\columnwidth]{q2_g01_b02.pdf}
+\caption{SIR model depicting the spread of COVID without practicing social distancing.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1.05\columnwidth]{q2_g01_b01.pdf}
+\caption{SIR model depicting the spread of COVID with practicing social distancing.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1.05\columnwidth]{q2_g014_b02.pdf}
+\caption{SIR model depicting the spread of the common cold.}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1.05\columnwidth]{q2_g007_b02.pdf}
+\caption{SIR model depicting the spread of a flu-like virus.}
+\end{figure}
+
+\end{document}

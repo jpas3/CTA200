@@ -43,7 +43,8 @@ def integrate_SIR(gamma, beta):
     
     Parameters:
     gamma - float, reciprocal of average period of infectiousness
-    beta - float, reciprocal of how often each infected person makes contact
+    beta - float, proportionality of how many people get into contact with the infected person.
+
     
     Returns:
     Plot of number of susceptible individuals, infected individuals, and 
